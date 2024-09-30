@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class TriggerZoneAddScore : MonoBehaviour
 {
-    private UIMangaer uIMangaer;
+    private UIManager uIManager;
 
     private bool triggered = false;
     // Start is called before the first frame update
     void Start()
     {
-        uIMangaer = GameObject.FindObjectOfType<UIManager>();
+        uIManager = GameObject.FindObjectOfType<UIManager>();
     }
 
     // Update is called once per frame
