@@ -466,7 +466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: 3afad42cab5a57a4c9f19f8deaaf8689, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.37
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: 3afad42cab5a57a4c9f19f8deaaf8689, type: 3}
       propertyPath: m_LocalPosition.y
@@ -474,7 +474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: 3afad42cab5a57a4c9f19f8deaaf8689, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: 3afad42cab5a57a4c9f19f8deaaf8689, type: 3}
       propertyPath: m_LocalRotation.x
@@ -549,6 +549,7 @@ MonoBehaviour:
   gravityModifier: 2.7
   isOnGround: 1
   gameOver: 0
+  playerAnimator: {fileID: 0}
 --- !u!65 &1117837310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -636,6 +637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b125c75d1f824947a8a5efb790b9564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   scoreText: {fileID: 1609067164}
   playerControllerScript: {fileID: 1117837307}
   won: 0
@@ -701,7 +703,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -786,7 +788,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14, y: 107}
+  m_AnchoredPosition: {x: 133, y: 60}
   m_SizeDelta: {x: 1027.5, y: 214}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1609067164
