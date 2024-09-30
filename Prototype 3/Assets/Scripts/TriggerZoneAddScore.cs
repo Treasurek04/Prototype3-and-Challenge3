@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+* Treasure Keys
+* Prototype 3
+Trigger Zone for Score 
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

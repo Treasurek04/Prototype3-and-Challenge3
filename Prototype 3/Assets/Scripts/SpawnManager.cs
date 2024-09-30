@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+* Treasure Keys
+* Prototype 3
+Make obstacles keep spawning 
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+* Treasure Keys
+* Prototype 3
+Handle the UI for the text
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
