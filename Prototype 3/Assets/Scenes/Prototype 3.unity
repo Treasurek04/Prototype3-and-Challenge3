@@ -636,6 +636,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b125c75d1f824947a8a5efb790b9564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 1609067164}
+  playerControllerScript: {fileID: 1117837307}
+  won: 0
 --- !u!4 &1353223906
 Transform:
   m_ObjectHideFlags: 0

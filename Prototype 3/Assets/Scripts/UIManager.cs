@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    public int score = 0;
+
     public Text scoreText;
-    public static int score = 0;
 
     public PlayerController playerControllerScript;
 
@@ -18,7 +19,7 @@ public class UIManager : MonoBehaviour
     {
         if(scoreText == null)
         {
-            scoreText == FindObjectOfType<Text>();
+            scoreText = FindObjectOfType<Text>();
         }
 
         if(playerControllerScript == null)
@@ -34,7 +35,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
 
-        if(!playerControllerScript.gameOver && !won)
+        if(!playerControllerScript.gameOver)
         {
             scoreText.text = "Score: " + score;
         }
@@ -56,7 +57,7 @@ public class UIManager : MonoBehaviour
 
         if(playerControllerScript.gameOver && Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         
     }

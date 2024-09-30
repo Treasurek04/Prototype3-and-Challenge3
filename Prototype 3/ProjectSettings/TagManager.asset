@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Obstacle
   - SpawnManager
+  - TriggerZone
   layers:
   - Default
   - TransparentFX
