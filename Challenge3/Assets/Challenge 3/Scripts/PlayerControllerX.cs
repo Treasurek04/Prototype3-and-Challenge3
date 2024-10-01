@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerControllerX : MonoBehaviour
 {
     public bool gameOver = false;
-    public float floatForce;
-    private float gravityModifier = 1.2f;
+    public float floatForce = 5f; // Adjust this value for how much force is applied
+    private float gravityModifier = 1.5f;
     private Rigidbody playerRb;
     public ParticleSystem explosionParticle;
     public ParticleSystem fireworksParticle;
@@ -17,16 +17,19 @@ public class PlayerControllerX : MonoBehaviour
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
-        Physics.gravity *= gravityModifier;
+        Physics.gravity *= gravityModifier; // Adjust the global gravity
         playerAudio = GetComponent<AudioSource>();
-        playerRb.AddForce(Vector3.up * 5, ForceMode.Impulse);
+        playerRb.AddForce(Vector3.up * 5, ForceMode.Impulse); // Initial upward force
     }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space) && !gameOver)
+        if (!gameOver)
         {
-            playerRb.AddForce(Vector3.up * floatForce * Time.deltaTime, ForceMode.Impulse);
+            if (Input.GetKey(KeyCode.Space))
+            {
+                playerRb.AddForce(Vector3.up * floatForce, ForceMode.Impulse); // Apply upward force
+            }
         }
     }
 

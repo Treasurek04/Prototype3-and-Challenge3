@@ -17,7 +17,7 @@ public class SpawnManagerX : MonoBehaviour
 
     void SpawnObjects()
     {
-        Vector3 spawnLocation = new Vector3(30, Random.Range(5, 10), 0);
+        Vector3 spawnLocation = new Vector3(30, Random.Range(1, 3), 0); // Adjusted height, hope this helps
         int index = Random.Range(0, objectPrefabs.Length);
 
         if (!playerControllerScript.gameOver)
