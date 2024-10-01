@@ -8,6 +8,9 @@ TagManager:
   - Bomb
   - Background
   - SpawnManager
+  - Ground
+  - ScoreText
+  - UIManager
   layers:
   - Default
   - TransparentFX
