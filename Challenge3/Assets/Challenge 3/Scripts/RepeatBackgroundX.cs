@@ -7,6 +7,7 @@ public class RepeatBackgroundX : MonoBehaviour
     private Vector3 startPos;
     private float repeatWidth;
 
+
     private void Start()
     {
         startPos = transform.position; // Establish the default starting position 
@@ -20,6 +21,8 @@ public class RepeatBackgroundX : MonoBehaviour
         {
             transform.position = startPos;
         }
+
+      
     }
 
  
