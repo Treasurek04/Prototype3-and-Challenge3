@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
             playerControllerXScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControllerX>();
         }
 
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Score: 0";
     }
 
     void Update()
@@ -32,16 +32,15 @@ public class UIManager : MonoBehaviour
         {
             scoreText.text = "Score: " + score;
 
-            // Check for win condition
-            if (score >= 10 && !won)
+            // Check for win condition only when the score changes
+            if (score >= 10)
             {
                 playerControllerXScript.gameOver = true;
                 won = true;
                 scoreText.text = "You Win!\nPress R to Try Again!";
             }
         }
-
-        if (playerControllerXScript.gameOver && !won)
+        else if (!won)
         {
             scoreText.text = "You Lose!\nPress R to Try Again!";
         }
@@ -52,19 +51,8 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    // Method to add score
-    public void AddScore()
+    public void AddScore(int amount)
     {
-        score++;
-        Debug.Log("Score: " + score);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Money"))
-        {
-            AddScore(); // Increment score when collecting money
-            Destroy(other.gameObject); // Destroy the money object after collecting it
-        }
+        score += amount;
     }
 }

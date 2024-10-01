@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerControllerX : MonoBehaviour
 {
-    public bool gameOver;
+    public bool gameOver = false;
     public float floatForce;
     private float gravityModifier = 1.2f;
     private Rigidbody playerRb;

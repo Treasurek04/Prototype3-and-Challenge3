@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 547a3a95abf633046a4b5474b6bacbfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 30
+  score: 0
   scoreText: {fileID: 395220955}
   playerControllerXScript: {fileID: 0}
   won: 0
