@@ -676,6 +676,21 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1256357759036450918, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256357759036921742, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256357759036937364, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1256357759124277780, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
         type: 3}
       propertyPath: explodeSound
@@ -689,7 +704,7 @@ PrefabInstance:
     - target: {fileID: 1256357759124277780, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
         type: 3}
       propertyPath: floatForce
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1256357759124277780, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
         type: 3}
@@ -712,6 +727,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_UseGravity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256357759124277781, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256357759124277781, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1256357760177741818, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
         type: 3}
