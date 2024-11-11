@@ -8,28 +8,28 @@ public class ScoreManager : MonoBehaviour
     public int score = 0;
     public Text scoreText;
 
-    void Start()
-    {
-        UpdateScoreText();
-    }
-
-   void AddScore(int points)
-    {
-        score += points;
-        UpdateScoreText();
-    }
-
-    void ResetScore()
+    public void Start()
     {
         score = 0;
-        UpdateScoreText();
+        Update();
     }
 
-    private void UpdateScoreText()
+   public void AddScore(int points)
     {
-        if (scoreText != null)
-        {
-            scoreText.text = "Score: " + score;
-        }
+        score += points;
+        Update();
+    }
+
+    public void ResetScore()
+    {
+        score = 0;
+        Update();
+    }
+
+    private void Update()
+    {
+     
+        scoreText.text = "Score: " + score;
+        
     }
 }

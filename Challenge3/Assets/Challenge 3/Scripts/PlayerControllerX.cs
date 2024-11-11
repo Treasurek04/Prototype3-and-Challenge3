@@ -27,6 +27,8 @@ public class PlayerControllerX : MonoBehaviour
 
     private Rigidbody playerRb;
 
+    public ScoreManager scoreManager;
+
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
@@ -37,6 +39,13 @@ public class PlayerControllerX : MonoBehaviour
         playerRb.drag = 1f;
 
         playerRb.AddForce(Vector3.up * 5, ForceMode.Impulse);
+
+        if (!Input.GetKeyDown(KeyCode.Space))
+        {
+            Physics.gravity = new Vector3(0, -9.81f * gravityModifier, 0);
+        }
+
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     void Update()
@@ -68,21 +77,25 @@ public class PlayerControllerX : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Bomb"))
         {
             explosionParticle.Play();
             playerAudio.PlayOneShot(explodeSound, 1.0f);
             gameOver = true;
-            Destroy(collision.gameObject);
+            Destroy(collision.gameObject); 
         }
+    }
 
-        else if (collision.gameObject.CompareTag("Money"))
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Money"))
         {
             fireworksParticle.Play();
             playerAudio.PlayOneShot(moneySound, 1.0f);
-            Destroy(collision.gameObject);
+            scoreManager.AddScore(1); 
+            Destroy(other.gameObject); 
         }
     }
 }

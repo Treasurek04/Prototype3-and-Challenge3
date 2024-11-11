@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 1231978215962860849}
   - component: {fileID: 1242410267751775709}
   - component: {fileID: 1256357759124277781}
-  - component: {fileID: 1256357759124277780}
   - component: {fileID: 1672443118734096}
   - component: {fileID: 1672443118734095}
   - component: {fileID: 785340223821834805}
+  - component: {fileID: 6360194870510721336}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -100,24 +100,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 90
   m_CollisionDetection: 0
---- !u!114 &1256357759124277780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254969024778041369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3da77984db434cf7a7209211eb746ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameOver: 0
-  floatForce: 10
-  explosionParticle: {fileID: 1256357759036533282}
-  fireworksParticle: {fileID: 19860484, guid: 6586ff0f14125534cae2f5d8f04b7871, type: 3}
-  moneySound: {fileID: 8300000, guid: af9f934eb4288464eb120a5857921cc3, type: 3}
-  explodeSound: {fileID: 8300000, guid: 774ebc5c074ce4695b7cc310fbd44087, type: 3}
 --- !u!65 &1672443118734096
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -240,6 +222,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6360194870510721336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254969024778041369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3da77984db434cf7a7209211eb746ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: 0
+  floatForce: 10
+  bounceForce: 2
+  gravityModifier: 0.5
+  maxY: 14
+  minY: 0.5
+  explosionParticle: {fileID: 19821056, guid: 079954accd64b32419ec069129c81273, type: 3}
+  fireworksParticle: {fileID: 19860484, guid: 6586ff0f14125534cae2f5d8f04b7871, type: 3}
+  moneySound: {fileID: 8300000, guid: af9f934eb4288464eb120a5857921cc3, type: 3}
+  explodeSound: {fileID: 8300000, guid: 774ebc5c074ce4695b7cc310fbd44087, type: 3}
+  groundedSound: {fileID: 0}
 --- !u!1001 &1256357759050569762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -344,12 +349,6 @@ PrefabInstance:
 --- !u!4 &1256357759050709854 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 402300, guid: 079954accd64b32419ec069129c81273,
-    type: 3}
-  m_PrefabInstance: {fileID: 1256357759050569762}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &1256357759036533282 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 19821056, guid: 079954accd64b32419ec069129c81273,
     type: 3}
   m_PrefabInstance: {fileID: 1256357759050569762}
   m_PrefabAsset: {fileID: 0}

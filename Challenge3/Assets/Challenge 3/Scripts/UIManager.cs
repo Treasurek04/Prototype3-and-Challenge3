@@ -24,6 +24,8 @@ public class UIManager : MonoBehaviour
         }
 
         scoreText.text = "Score: 0";
+
+        
     }
 
     void Update()
@@ -32,12 +34,11 @@ public class UIManager : MonoBehaviour
         {
             scoreText.text = "Score: " + score;
 
-            // Check for win condition only when the score changes
-            if (score >= 10)
+            if (score == 10)
             {
+                scoreText.text = "You Win!\nPress R to Try Again!";
                 playerControllerXScript.gameOver = true;
                 won = true;
-                scoreText.text = "You Win!\nPress R to Try Again!";
             }
         }
         else if (!won)

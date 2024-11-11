@@ -11,6 +11,8 @@ TagManager:
   - Ground
   - ScoreText
   - UIManager
+  - WinText
+  - LoseText
   layers:
   - Default
   - TransparentFX

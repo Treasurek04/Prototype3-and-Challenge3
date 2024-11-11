@@ -617,6 +617,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: explodeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 774ebc5c074ce4695b7cc310fbd44087, type: 3}
+    - target: {fileID: 0}
+      propertyPath: moneySound
+      value: 
+      objectReference: {fileID: 8300000, guid: af9f934eb4288464eb120a5857921cc3, type: 3}
+    - target: {fileID: 0}
+      propertyPath: floatForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: fireworksParticle
+      value: 
+      objectReference: {fileID: 1842218855}
+    - target: {fileID: 0}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 300088865}
+    - target: {fileID: 0}
+      propertyPath: gravityModifier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bounceForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1242410267751775709, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
         type: 3}
       propertyPath: m_DynamicOccludee
@@ -625,7 +657,7 @@ PrefabInstance:
     - target: {fileID: 1252424353874074833, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.8
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 1252424353874074833, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
         type: 3}
@@ -702,46 +734,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1256357759124277780, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
-        type: 3}
-      propertyPath: explodeSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 774ebc5c074ce4695b7cc310fbd44087, type: 3}
-    - target: {fileID: 1256357759124277780, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
-        type: 3}
-      propertyPath: moneySound
-      value: 
-      objectReference: {fileID: 8300000, guid: af9f934eb4288464eb120a5857921cc3, type: 3}
-    - target: {fileID: 1256357759124277780, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
-        type: 3}
-      propertyPath: floatForce
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256357759124277780, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
-        type: 3}
-      propertyPath: fireworksParticle
-      value: 
-      objectReference: {fileID: 1842218855}
-    - target: {fileID: 1256357759124277780, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
-        type: 3}
-      propertyPath: explosionParticle
-      value: 
-      objectReference: {fileID: 300088865}
-    - target: {fileID: 1256357759124277780, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
-        type: 3}
-      propertyPath: gravityModifier
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256357759124277780, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
-        type: 3}
-      propertyPath: bounceForce
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1256357759124277780, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1256357759124277781, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
         type: 3}
       propertyPath: m_Mass
@@ -755,7 +747,7 @@ PrefabInstance:
     - target: {fileID: 1256357759124277781, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
         type: 3}
       propertyPath: m_Constraints
-      value: 82
+      value: 114
       objectReference: {fileID: 0}
     - target: {fileID: 1256357759124277781, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
         type: 3}
@@ -782,8 +774,27 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1256357759124277780, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2, type: 3}
+    - target: {fileID: 6360194870510721336, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
+        type: 3}
+      propertyPath: minY
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6360194870510721336, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
+        type: 3}
+      propertyPath: gameOver
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6360194870510721336, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
+        type: 3}
+      propertyPath: floatForce
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6360194870510721336, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
+        type: 3}
+      propertyPath: bounceForce
+      value: 1.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2, type: 3}
 --- !u!1 &564804085
 GameObject:
@@ -879,37 +890,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc89f5ae3b1d4649a3301d642e3f9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  score: 10
   scoreText: {fileID: 395220955}
---- !u!1 &1293711052 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1254969024778041369, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
-    type: 3}
-  m_PrefabInstance: {fileID: 560531883}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1293711056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1293711052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3da77984db434cf7a7209211eb746ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameOver: 0
-  floatForce: 10
-  bounceForce: 2
-  gravityModifier: 0.5
-  maxY: 14
-  minY: 0.5
-  explosionParticle: {fileID: 19821056, guid: 079954accd64b32419ec069129c81273, type: 3}
-  fireworksParticle: {fileID: 19860484, guid: 6586ff0f14125534cae2f5d8f04b7871, type: 3}
-  moneySound: {fileID: 8300000, guid: af9f934eb4288464eb120a5857921cc3, type: 3}
-  explodeSound: {fileID: 8300000, guid: 774ebc5c074ce4695b7cc310fbd44087, type: 3}
-  groundedSound: {fileID: 0}
 --- !u!1 &1331966247
 GameObject:
   m_ObjectHideFlags: 0
