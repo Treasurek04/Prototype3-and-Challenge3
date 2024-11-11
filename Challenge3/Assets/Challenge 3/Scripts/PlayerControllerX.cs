@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+ Treasure Keys 
+Challenge 3
+Control player movement and gravity
+
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,7 +31,11 @@ public class PlayerControllerX : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody>();
         playerAudio = GetComponent<AudioSource>();
-        Physics.gravity *= gravityModifier;
+
+        playerRb.AddForce(Physics.gravity * (gravityModifier - 1), ForceMode.Acceleration);
+
+        playerRb.drag = 1f;
+
         playerRb.AddForce(Vector3.up * 5, ForceMode.Impulse);
     }
 
@@ -32,14 +43,9 @@ public class PlayerControllerX : MonoBehaviour
     {
         if (!gameOver)
         {
-            if (Input.GetKey(KeyCode.Space) && transform.position.y < maxY)
+            if (Input.GetKeyDown(KeyCode.Space) && transform.position.y < maxY)
             {
-                playerRb.AddForce(Vector3.up * floatForce);
-            }
-
-            if (!Input.GetKey(KeyCode.Space))
-            {
-                playerRb.AddForce(Vector3.down * floatForce * Time.deltaTime, ForceMode.Acceleration);
+                playerRb.AddForce(Vector3.up * floatForce, ForceMode.Impulse);
             }
 
             if (transform.position.y > maxY)
@@ -62,21 +68,21 @@ public class PlayerControllerX : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("Bomb"))
+        if (collision.gameObject.CompareTag("Bomb"))
         {
             explosionParticle.Play();
             playerAudio.PlayOneShot(explodeSound, 1.0f);
             gameOver = true;
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
         }
 
-        else if (other.gameObject.CompareTag("Money"))
+        else if (collision.gameObject.CompareTag("Money"))
         {
             fireworksParticle.Play();
             playerAudio.PlayOneShot(moneySound, 1.0f);
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }
