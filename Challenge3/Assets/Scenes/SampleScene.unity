@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   scoreText: {fileID: 395220955}
-  playerControllerXScript: {fileID: 0}
+  playerControllerXScript: {fileID: 186688158}
   won: 0
 --- !u!4 &76231789
 Transform:
@@ -228,6 +228,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &186688158 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6360194870510721336, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,
+    type: 3}
+  m_PrefabInstance: {fileID: 560531883}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3da77984db434cf7a7209211eb746ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &300088865 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1256357759036533282, guid: 0ae5bab20a4814ac0840dcc8c32cd9b2,

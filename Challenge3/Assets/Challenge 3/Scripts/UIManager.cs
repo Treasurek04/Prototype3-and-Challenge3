@@ -23,9 +23,7 @@ public class UIManager : MonoBehaviour
             playerControllerXScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControllerX>();
         }
 
-        scoreText.text = "Score: 0";
-
-        
+        UpdateScoreText();
     }
 
     void Update()
@@ -34,16 +32,19 @@ public class UIManager : MonoBehaviour
         {
             scoreText.text = "Score: " + score;
 
-            if (score == 10)
+            if (score >= 10 && !won)
             {
-                scoreText.text = "You Win!\nPress R to Try Again!";
                 playerControllerXScript.gameOver = true;
                 won = true;
+                scoreText.text = "You Win!\nPress R to Try Again!";
             }
         }
-        else if (!won)
+        else
         {
-            scoreText.text = "You Lose!\nPress R to Try Again!";
+            if (playerControllerXScript.gameOver = true && !won)
+            {
+                scoreText.text = "You Lose!\nPress R to Try Again!";
+            }
         }
 
         if (playerControllerXScript.gameOver && Input.GetKeyDown(KeyCode.R))
@@ -55,5 +56,11 @@ public class UIManager : MonoBehaviour
     public void AddScore(int amount)
     {
         score += amount;
+        UpdateScoreText();
+    }
+
+    private void UpdateScoreText()
+    {
+        scoreText.text = "Score: " + score;
     }
 }
